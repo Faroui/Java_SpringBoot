@@ -13,7 +13,14 @@ type BankAccount{
     currency : String,
     type : String
 }
-input BankAccountDTO{
+type BankAccountResponseDTO{
+    id : String,
+    createdAt : Float,
+    balance : Float,
+    currency : String,
+    type : String
+}
+input BankAccountRequestDTO{
     balance : Float,
     currency : String,
     type : String
