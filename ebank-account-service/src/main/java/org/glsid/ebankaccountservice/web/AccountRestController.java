@@ -1,6 +1,10 @@
 package org.glsid.ebankaccountservice.web;
+import org.glsid.ebankaccountservice.dtos.BankAccountRequestDTO;
+import org.glsid.ebankaccountservice.dtos.BankAccountResponseDTO;
 import org.glsid.ebankaccountservice.entities.BankAccount;
+import org.glsid.ebankaccountservice.mappers.AccountMapper;
 import org.glsid.ebankaccountservice.repositories.BankAccountRepository;
+import org.glsid.ebankaccountservice.service.AccountService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -11,8 +15,12 @@ import java.util.UUID;
 public class AccountRestController {
 
     private BankAccountRepository bankAccountRepository;
-    public AccountRestController(BankAccountRepository bankAccountRepository){
+    private AccountService accountService;
+    private AccountMapper accountMapper;
+    public AccountRestController(BankAccountRepository bankAccountRepository,AccountService accountService,AccountMapper accountMapper){
         this.bankAccountRepository = bankAccountRepository;
+        this.accountService=accountService;
+        this.accountMapper=accountMapper;
     }
     @GetMapping("/bankAccounts")
     public List<BankAccount> bankAccounts(){
@@ -25,9 +33,8 @@ public class AccountRestController {
 
     }
     @PostMapping("/bankAccounts")
-    public BankAccount save(@RequestBody  BankAccount bankAccount){
-        if(bankAccount.getId()==null)bankAccount.setId(UUID.randomUUID().toString());
-        return bankAccountRepository.save(bankAccount);
+    public BankAccountResponseDTO save(@RequestBody BankAccountRequestDTO bankAccountRequestDTO){
+        return accountService.addAccount(bankAccountRequestDTO);
     }
     @PutMapping("/bankAccounts/{id}")
     public BankAccount update(@PathVariable String id,@RequestBody BankAccount bankAccount){
