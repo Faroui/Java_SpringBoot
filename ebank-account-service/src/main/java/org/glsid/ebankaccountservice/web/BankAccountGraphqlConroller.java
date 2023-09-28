@@ -3,8 +3,10 @@ package org.glsid.ebankaccountservice.web;
 import org.glsid.ebankaccountservice.dtos.BankAccountRequestDTO;
 import org.glsid.ebankaccountservice.dtos.BankAccountResponseDTO;
 import org.glsid.ebankaccountservice.entities.BankAccount;
+import org.glsid.ebankaccountservice.entities.Customer;
 import org.glsid.ebankaccountservice.repositories.BankAccountRepository;
 import org.glsid.ebankaccountservice.service.AccountService;
+import org.glsid.ebankaccountservice.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.graphql.data.method.annotation.Argument;
 import org.springframework.graphql.data.method.annotation.MutationMapping;
@@ -18,6 +20,8 @@ public class BankAccountGraphqlConroller {
     private BankAccountRepository bankAccountRepository;
     @Autowired
     private AccountService accountService;
+    @Autowired
+    private CustomerService customerService;
     @QueryMapping
     public List<BankAccount> accountsList(){
         return bankAccountRepository.findAll();
@@ -30,6 +34,18 @@ public class BankAccountGraphqlConroller {
     public BankAccountResponseDTO addAccount(@Argument BankAccountRequestDTO bankAccount){
         return accountService.addAccount(bankAccount);
     }
+    @MutationMapping
+    public BankAccountResponseDTO updateAccount(@Argument String id,@Argument BankAccountRequestDTO bankAccount){
+        return accountService.updateAccount(id,bankAccount);
+    }
+    @MutationMapping
+    public Boolean deleteAccount(@Argument String id){
+        return accountService.deleteAccount(id);
+    }
+    @QueryMapping
+    public List<Customer> customers(){
+            return customerService.customers();
+    }
 }
 //@Data
 //@NoArgsConstructor
@@ -39,7 +55,7 @@ public class BankAccountGraphqlConroller {
 //    private Double balance;
 //    private String currency;
 //}
-/*instead to create like this class you can use record
+/*
+instead to create like this class you can use record
 record BankAccountDTO(Double balance, String type,String currency){
-
 }*/

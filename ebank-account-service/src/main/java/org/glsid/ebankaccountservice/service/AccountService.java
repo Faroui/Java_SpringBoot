@@ -7,4 +7,7 @@ import org.glsid.ebankaccountservice.enums.AccountType;
 
 public interface AccountService {
     public BankAccountResponseDTO addAccount(BankAccountRequestDTO bankAccountDTO);
+    public BankAccountResponseDTO updateAccount(String id,BankAccountRequestDTO bankAccountDTO);
+
+    public Boolean deleteAccount(String id);
 }
