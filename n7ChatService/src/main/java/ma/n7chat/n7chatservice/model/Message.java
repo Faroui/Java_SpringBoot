@@ -1,14 +1,12 @@
 package ma.n7chat.n7chatservice.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import ma.n7chat.n7chatservice.enums.Status;
-@Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
+@Getter
+@Setter
+@ToString
 public class Message {
     private String senderName;
     private String receiverName;
