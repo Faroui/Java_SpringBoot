@@ -1,18 +1,15 @@
-package ma.n7spring.demospringcloudkafka.entities;
+package ma.n7.demospringandkafka.entities;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.ToString;
 
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
-@ToString
+import java.util.Date;
+@Data @NoArgsConstructor @AllArgsConstructor @Builder
 public class PageEvent {
     private String name;
     private String user;
-    private String date;
+    private Date date;
     private long duration;
-
 }
