@@ -14,7 +14,9 @@ public class Seeder implements CommandLineRunner {
     public void run(String... args) throws Exception {
         repository.save(
                 Product.builder()
-                        .name("ahmed")
+                        .name("Apple")
+                        .description("iphone 14 pro max")
+
                         .build()
         );
         System.out.println("saved");
