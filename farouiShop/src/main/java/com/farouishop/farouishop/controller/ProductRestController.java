@@ -1,6 +1,4 @@
 package com.farouishop.farouishop.controller;
-
-
 import com.farouishop.farouishop.dtos.ProductRequest;
 import com.farouishop.farouishop.dtos.ProductResponse;
 import com.farouishop.farouishop.exceptions.ProductNotFoundException;
@@ -19,13 +17,16 @@ public class ProductRestController {
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public void addProduct(@RequestBody ProductRequest productRequest){
+
         productService.addProduct(productRequest);
     }
     @GetMapping
+    @ResponseStatus(HttpStatus.OK)
     public List<ProductResponse> products(){
         return productService.getProducts();
     }
     @GetMapping("/{id}")
+    @ResponseStatus(HttpStatus.OK)
     public ProductResponse getById(@PathVariable String id) throws ProductNotFoundException {
         return productService.getProductsById(id);
     }
