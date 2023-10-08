@@ -3,6 +3,7 @@ package com.farouishop.farouishop.controller;
 
 import com.farouishop.farouishop.dtos.ProductRequest;
 import com.farouishop.farouishop.dtos.ProductResponse;
+import com.farouishop.farouishop.exceptions.ProductNotFoundException;
 import com.farouishop.farouishop.services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -25,7 +26,7 @@ public class ProductRestController {
         return productService.getProducts();
     }
     @GetMapping("/{id}")
-    public ProductResponse getById(@PathVariable Long id){
+    public ProductResponse getById(@PathVariable String id) throws ProductNotFoundException {
         return productService.getProductsById(id);
     }
 }
