@@ -1,7 +1,5 @@
-package com.farouishop.farouishop;
+package com.farouishop.productService;
 
-import com.farouishop.farouishop.repository.ProductRepository;
-import lombok.RequiredArgsConstructor;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;

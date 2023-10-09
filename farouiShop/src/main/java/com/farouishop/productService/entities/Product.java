@@ -1,4 +1,4 @@
-package com.farouishop.farouishop.entities;
+package com.farouishop.productService.entities;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

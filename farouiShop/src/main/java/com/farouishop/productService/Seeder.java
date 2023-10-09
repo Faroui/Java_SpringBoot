@@ -1,7 +1,7 @@
-package com.farouishop.farouishop;
+package com.farouishop.productService;
 
-import com.farouishop.farouishop.entities.Product;
-import com.farouishop.farouishop.repository.ProductRepository;
+import com.farouishop.productService.entities.Product;
+import com.farouishop.productService.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;

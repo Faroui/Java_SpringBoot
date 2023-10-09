@@ -1,4 +1,4 @@
-package com.farouishop.farouishop.dtos;
+package com.farouishop.productService.dtos;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

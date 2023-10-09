@@ -1,8 +1,8 @@
-package com.farouishop.farouishop.mappers;
+package com.farouishop.productService.mappers;
 
-import com.farouishop.farouishop.dtos.ProductRequest;
-import com.farouishop.farouishop.dtos.ProductResponse;
-import com.farouishop.farouishop.entities.Product;
+import com.farouishop.productService.dtos.ProductRequest;
+import com.farouishop.productService.dtos.ProductResponse;
+import com.farouishop.productService.entities.Product;
 
 public interface ProductMapper {
     public ProductRequest fromProductToProductRequest(Product product);

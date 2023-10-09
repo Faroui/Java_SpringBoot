@@ -1,5 +1,5 @@
-package com.farouishop.farouishop.repository;
-import com.farouishop.farouishop.entities.Product;
+package com.farouishop.productService.repository;
+import com.farouishop.productService.entities.Product;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;

@@ -1,4 +1,4 @@
-package com.farouishop.farouishop.exceptions;
+package com.farouishop.productService.exceptions;
 
 public class ProductNotFoundException extends Throwable {
     public ProductNotFoundException(String s) {

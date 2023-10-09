@@ -1,8 +1,8 @@
-package com.farouishop.farouishop.controller;
-import com.farouishop.farouishop.dtos.ProductRequest;
-import com.farouishop.farouishop.dtos.ProductResponse;
-import com.farouishop.farouishop.exceptions.ProductNotFoundException;
-import com.farouishop.farouishop.services.ProductService;
+package com.farouishop.productService.controller;
+import com.farouishop.productService.dtos.ProductRequest;
+import com.farouishop.productService.dtos.ProductResponse;
+import com.farouishop.productService.exceptions.ProductNotFoundException;
+import com.farouishop.productService.services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;

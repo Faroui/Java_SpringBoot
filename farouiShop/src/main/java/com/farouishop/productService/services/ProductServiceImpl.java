@@ -1,11 +1,11 @@
-package com.farouishop.farouishop.services;
+package com.farouishop.productService.services;
 
-import com.farouishop.farouishop.dtos.ProductRequest;
-import com.farouishop.farouishop.dtos.ProductResponse;
-import com.farouishop.farouishop.entities.Product;
-import com.farouishop.farouishop.exceptions.ProductNotFoundException;
-import com.farouishop.farouishop.mappers.ProductMapper;
-import com.farouishop.farouishop.repository.ProductRepository;
+import com.farouishop.productService.dtos.ProductRequest;
+import com.farouishop.productService.dtos.ProductResponse;
+import com.farouishop.productService.entities.Product;
+import com.farouishop.productService.exceptions.ProductNotFoundException;
+import com.farouishop.productService.mappers.ProductMapper;
+import com.farouishop.productService.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
