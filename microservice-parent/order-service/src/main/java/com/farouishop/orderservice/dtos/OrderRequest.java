@@ -10,5 +10,4 @@ import java.util.List;
 @AllArgsConstructor
 public class OrderRequest {
     private List<OrderLineItemsDto> orderLineItemsDtoList;
-
 }

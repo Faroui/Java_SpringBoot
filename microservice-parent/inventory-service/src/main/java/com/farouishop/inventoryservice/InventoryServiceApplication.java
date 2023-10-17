@@ -2,7 +2,6 @@ package com.farouishop.inventoryservice;
 
 import com.farouishop.inventoryservice.model.Inventory;
 import com.farouishop.inventoryservice.repository.InventoryRepository;
-import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -28,7 +27,7 @@ public class InventoryServiceApplication {
 					.quantity(90)
 					.build();
 			inventoryRepository.save(inventory);
-			inventoryRepository.save(inventory1);
+ 			inventoryRepository.save(inventory1);
 		};
 	}
 
