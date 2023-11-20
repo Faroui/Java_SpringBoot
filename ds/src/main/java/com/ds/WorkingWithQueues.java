@@ -10,7 +10,7 @@ public class WorkingWithQueues {
         supermarket.add(new Person("Mariam",2));
         supermarket.add(new Person("Imane",28));
         supermarket.poll();
-        System.out.println(supermarket);
+        System.out.println(supermarket.size());
     }
     static record Person(String name,int age){}
 }
