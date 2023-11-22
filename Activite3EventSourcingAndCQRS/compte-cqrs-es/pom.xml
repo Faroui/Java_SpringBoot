@@ -9,7 +9,7 @@
 		<version>2.7.6</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>taffah.enset</groupId>
+	<groupId>faroui.glsid</groupId>
 	<artifactId>account-cqrs-event-sourcing</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>account-cqrs-event-sourcing</name>
